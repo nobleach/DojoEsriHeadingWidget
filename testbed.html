@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scaleable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" /> <!--removes status bar also (only when in standalone mode)-->
+  <link rel="apple-touch-icon" href="images/afm_logo72x72.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="images/afm_logo72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/afm_logo114x114.png" />
+  <title>Widget Test Bed</title>
+  <link rel="stylesheet" href="css/HeadingWidget.css"/>
+  <style type="text/css">
+    body {
+      background:#eee;
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<div id="heading-widget-holder"></div>
+<script>
+  // Instead of using data-dojo-config, we're creating a dojoConfig
+  // object *before* we load dojo.js; they're functionally identical,
+  // it's just easier to read this approach with a larger configuration.
+  var dojoConfig = {
+    async: true,
+    // This code registers the correct location of the "demo"
+    // package so we can load Dojo from the CDN whilst still
+    // being able to load local modules
+    packages: [{
+      name: "widgets",
+      location: location.pathname.replace(/\/[^/]*$/, '') + '/js/widgets'
+    }]
+  };
+</script>
+<!-- load Dojo -->
+<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.9.2/dojo/dojo.js"
+        data-dojo-config="async: true"></script>
+<script type="text/javascript">
+  document.body.addEventListener('touchmove', function(event) {
+    console.log(event.source);
+    //if (event.source == document.body)
+    event.preventDefault();
+  }, false);
+
+
+  require([
+    'widgets/HeadingWidget'
+  ], function (HeadingWidget) {
+    new HeadingWidget();
+  });
+</script>
+</body>
+</html>

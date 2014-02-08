@@ -1,0 +1,68 @@
+div#heading-widget-holder {
+  height:260px;
+  width:200px;
+  padding:10px;
+  position: fixed;
+  top:80px;
+  left:50%;
+  margin-left:-110px;
+  z-index: 408;
+  background: rgba(255,255,255,0.7);
+}
+
+div#heading-widget-holder.inuse {
+  top:80px;
+}
+#compassContainer { position:absolute; width:200px; height:200px; background:url('../img/compass_dial90.png') no-repeat;
+  border-radius:100px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#slider { position:relative; height:40px; width:40px; left:81px; top:-20px;
+  background: rgba(0,0,139,0.1) url(../img/arrow.png) no-repeat center 20px;
+  border-radius:20px;
+}
+#degree-output {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  margin-left: -40px;
+  z-index: 3;
+  top: 50%;
+  margin-top: -40px;
+  color: #00008B;
+  text-align: center;
+
+}
+
+#degree-output h4 {
+  font-family: Helvetica Neue, Helvetica, Arial;
+  font-weight: 100;
+}
+
+#degree-output p {
+  font-family: Helvetica Neue, Helvetica, Arial;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+div#heading-widget-holder .btn {
+  width: 200px;
+  height: 35px;
+  margin: 26px 0 20px;
+  color: white;
+  background-color: #00008B;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  border: none;
+  position: absolute;
+  bottom: 0px;
+}
