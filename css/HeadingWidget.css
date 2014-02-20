@@ -22,9 +22,12 @@ div#heading-widget-holder.inuse {
   -ms-user-select: none;
   user-select: none;
 }
-#slider { position:relative; height:40px; width:40px; left:81px; top:-20px;
-  background: rgba(0,0,139,0.1) url(../img/arrow.png) no-repeat center 20px;
-  border-radius:20px;
+#arrow {
+  position: absolute;
+  left: 50%;
+  margin-left: -12px;
+  top: 50%;
+  margin-top: -68px;
 }
 #degree-output {
   position: absolute;
@@ -37,7 +40,6 @@ div#heading-widget-holder.inuse {
   margin-top: -40px;
   color: #00008B;
   text-align: center;
-
 }
 
 #degree-output h4 {
